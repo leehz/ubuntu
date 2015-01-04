@@ -4,3 +4,6 @@
 -spice port=5900,addr=192.168.3.148,disable-ticketing
 
   kvm -smp 4 -m 2048 -name f15 -drive file=~/Fedora-Cloud-Base-20141203-21.x86_64.qcow2,if=virtio  -net nic,model=virtio,macaddr=1a:46:0b:ca:bc:7b -net tap
+
+
+   nohup kvm -cpu host -nographic -smp 4 -m 2048 -name f15 -drive file=~/Fedora-Cloud-Base-20141203-21.x86_64.qcow2,if=virtio  -net nic,model=virtio -net tap  -localtime  -spice port=5900,addr=192.168.3.148,disable-ticketing &
