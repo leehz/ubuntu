@@ -1,0 +1,6 @@
+## qemu-img txt ##
+
+- qemu-img info  test.qcow2 
+    get the information of test
+- qemu-img resize test.qcow2 +10G
+    change the size
