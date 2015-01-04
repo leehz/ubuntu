@@ -1,0 +1,3 @@
+-  virt-customize -a Fedora-Cloud-Base-20141203-21.x86_64.qcow2 --root-password password:123456
+-  [Link download Fedora cloud](http://ftp.sjtu.edu.cn/fedora/linux/releases/21/Cloud/Images/x86_64/)
+
