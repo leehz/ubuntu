@@ -4,4 +4,5 @@
 -  apt-get install libguestfs-tools (ubuntu install commond)
 ## fedora ways ##
 - [Links for fedora wiki](http://fedoraproject.org/wiki/QA:Testcase_Virtualization_Import_Guest_Install)
+- [Users & Passwd](http://libguestfs.org/virt-builder.1.html#users-and-passwords)
 - virt-buildert
