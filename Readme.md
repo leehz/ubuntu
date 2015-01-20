@@ -14,4 +14,4 @@
 ``` shell
 sh  color2.sh
 ```
-![color2.sh test]()
+![color2.sh test](https://raw.githubusercontent.com/leehz/ubuntu/master/color2.png)
