@@ -7,11 +7,12 @@
  added for ip forward
 
 
- ### what is work ###
-!!! important
- iptables -t nat -A POSTROUTING -s 10.0.1.0/24 ! -d 10.0.1.0/24 -j MASQUERADE
+### what is work ###
+**!!! important**
+
+` iptables -t nat -A POSTROUTING -s 10.0.1.0/24 ! -d 10.0.1.0/24 -j MASQUERADEa`
 
 
- ### port forward ###
+### port forward ###
 
- iptables -t nat  -A PREROUTING -d 192.168.3.130/32 -i br0 -p tcp -m tcp --dport 16666 -j DNAT --to-destination 10.0.1.212:22
+` iptables -t nat  -A PREROUTING -d 192.168.3.130/32 -i br0 -p tcp -m tcp --dport 16666 -j DNAT --to-destination 10.0.1.212:22`
