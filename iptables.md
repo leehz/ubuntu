@@ -6,6 +6,7 @@
 -A OUTPUT -o virbr0 -p udp -m udp --dport 68 -j ACCEPT
  added for ip forward
 
+[network](http://wiki.qemu.org/Documentation/Networking/NAT)
 
 ### what is work ###
 **!!! important**
