@@ -7,7 +7,7 @@
  added for ip forward
 
 [network](http://wiki.qemu.org/Documentation/Networking/NAT)
-
+[ubuntu wiki for kvm network](https://help.ubuntu.com/community/KVM/Networking)
 ### what is work ###
 **!!! important**
 
