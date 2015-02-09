@@ -45,7 +45,9 @@ LOCALBOOT 0
 ### command ###
 
 brctl addbr net
+
 ifconfig net 10.0.1.1/24 up
+
 /etc/init.d/dnsmaq start
 
 qemu-system-x86_64 --enable-kvm -cpu host  -m 2G -net  nic -net tap,script=/etc/ifup,downscript=/etc/ifdown
