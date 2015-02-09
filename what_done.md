@@ -11,6 +11,13 @@
         tftp-root=/var/lib/tftpboot
 ```
 
+& the running command
+
+```
+/usr/sbin/dnsmasq -x /var/run/dnsmasq/dnsmasq.pid -u dnsmasq -r /var/run/dnsmasq/resolv.conf -7 /etc/dnsmasq.d,.dpkg-dist,.dpkg-old,.dpkg-new --local-servicenetsta
+```
+
+
 pxelinux.cfg/default:
 
 ```
