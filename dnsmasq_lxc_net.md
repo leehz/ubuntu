@@ -1,0 +1,1 @@
+dnsmasq -u lxc-dnsmasq --strict-order --bind-interfaces --pid-file=/run/lxc/dnsmasq.pid --conf-file= --listen-address 192.168.122.1 --dhcp-range 192.168.122.2,192.168.122.254 --dhcp-lease-max=253 --dhcp-no-override --except-interface=lo --interface=virbr0 --dhcp-sequential-ip --dhcp-leasefile=/var/lib/misc/dnsmasq.lxcbr0.leases --dhcp-authoritative
