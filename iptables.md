@@ -11,7 +11,7 @@
 ### what is work ###
 **!!! important**
 
-` iptables -t nat -A POSTROUTING -s 10.0.1.0/24 ! -d 10.0.1.0/24 -j MASQUERADEa`
+` iptables -t nat -A POSTROUTING -s 10.0.1.0/24 ! -d 10.0.1.0/24 -j MASQUERADE`
 
 
 ### port forward ###
