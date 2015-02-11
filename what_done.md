@@ -4,6 +4,7 @@
 ```
         interface=net
         dhcp-range=10.0.1.200,10.0.1.253,12h
+        dhcp-sequential-ip
         dhcp-match=set:IPXEBOOT,175 # tag ipxe
         dhcp-option=tag:!IPXEBOOT,67,”undionly.kpxe” #chainload
         dhcp-option=67,”pxelinux.0” #default option

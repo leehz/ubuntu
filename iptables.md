@@ -17,5 +17,6 @@
 ### port forward ###
 
 ` iptables -t nat  -A PREROUTING -d 192.168.3.130/32 -i br0 -p tcp -m tcp --dport 16666 -j DNAT --to-destination 10.0.1.212:22`
+
 ` iptables -t nat -A PREROUTING -p tcp -i eth0 --dport 587 -j DNAT \
     --to-destination 10.0.3.100:587`
