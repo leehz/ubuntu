@@ -1,0 +1,1 @@
+kvm -cpu host -nographic -smp 4 -m 2048 -name f15 -drive file=./xp.qcow2,if=virtio  -net nic,model=virtio -net tap  -localtime  -vga qxl -spice port=5900,addr=172.16.0.236,disable-ticketing 
