@@ -1,9 +1,9 @@
 #!/bin/sh
+ 
 set -x
-
-switch=br0
+switch=virbr0
 
 echo "Executing /etc/qemu-ifdown"
-sudo /usr/bin/ip link set $1 down
-sudo /usr/bin/brctl delif $switch $1
-sudo /usr/bin/ip link delete dev $1
+sudo /sbin/ip link set $1 down
+sudo /usr/sbin/brctl delif $switch $1
+sudo /sbin/ip link delete dev $1
