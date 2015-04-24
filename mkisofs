@@ -1,0 +1,4 @@
+mkdir iso_root 
+cp grldr iso_root 
+cp menu.lst iso_root 
+mkisofs -R -b grldr -no-emul-boot -boot-load-size 4 -o grldr.iso iso_root 
