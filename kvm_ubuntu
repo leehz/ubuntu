@@ -1,0 +1,3 @@
+kvm -cpu host -m 758 -name u15  -kernel  vmlinuz-3.19.0-15-generic  -initrd initrd.img-3.19.0-15-generic -append "root=/dev/vda rw"  -drive file=vivid-server-cloudimg-amd64.img,if=virtio -net nic,model=virtio,macaddr=aa-11-22-33-55-44 -net tap -localtime
+
+kvm -smp 4 -m 2048 -name u1504  -drive file=ubuntu.qcow2,if=virtio  -net nic,model=virtio,macaddr=1a:46:0b:ca:bc:7c -net tap -localtime
