@@ -1,0 +1,1 @@
+ rdesktop -f -a 24 -u cloud -p cloud 10.0.0.32:3389 -r clipboard:PRIMARYCLIPBOARD   -r disk:root=/ -x a
