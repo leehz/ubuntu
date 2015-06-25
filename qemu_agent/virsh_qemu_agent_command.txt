@@ -1,0 +1,1 @@
+virsh qemu-agent-command fedora22 '{"execute":"guest-sync", "arguments":{"id":1234}}'

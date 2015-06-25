@@ -1,0 +1,3 @@
+root@hz-cloud:/hz/ubuntu/qemu_agent# socat  unix-connect:/var/lib/libvirt/qemu/channel/target/fedora22.qga -
+
+{"execute":"guest-sync", "arguments":{"id":1234}}
