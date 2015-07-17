@@ -1,0 +1,23 @@
+vgcreate   ccmp_glusterfs /dev/cciss/c0d0
+lvcreate  -L 100M -n metadata  ccmp_glusterfs
+lvcreate  -l +100%free -n data  ccmp_glusterfs
+
+mkfs.xfs  /dev/mapper/ccmp_glusterfs-metadata
+mkfs.xfs  /dev/mapper/ccmp_glusterfs-data
+mount /dev/mapper/ccmp_glusterfs-metadata  /var/lib/glusterd/
+
+mkdir /ccmp_glusterfs
+mount /dev/ccmp_glusterfs/data  /ccmp_glusterfs
+
+/etc/init.d/glusterfs-server  start
+
+gluster peer probe 172.16.0.206
+gluster volume create ccmp_vol replica 2 transport tcp 172.16.0.236:/ccmp_glusterfs/ccmp 172.16.0.206:/ccmp_glusterfs/ccmp
+gluster volume start ccmp_vol
+
+
+mysql -u root -p
+use ccmp;
+insert into ccmp.volume_info (VolumeID, Name, Comment, Parameter,State,  DiskLimit, DiskRemain,BricksCSV) values ('1', 'ccmp_vol', '', 'replica=2,stripe=1,transport=tcp', 'GOOD',  '0', '0','1,3');
+
+update volume_info set BricksCSV='1,3';
